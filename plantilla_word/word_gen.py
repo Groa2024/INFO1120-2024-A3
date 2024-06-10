@@ -27,23 +27,32 @@ def example_contract(date:str, rol:str, address:str, rut:str, full_name:str, nat
     run = paragraph.add_run()
     run.add_picture("imagenes/header.png")
     document.add_picture('imagenes/logo.png')
-    h = document.add_paragraph('')
+    h = document.add_paragraph('')  
     h.add_run('CONTRATO DE PRESTACIÓN DE SERVICIOS A HONORARIOS\n').bold = True
     h.alignment = 1
     font.size = Pt(10)
     h.add_run(
-        '............................................................................................................................................................................................................................. ').bold = True
-    p = document.add_paragraph(f'En Temuco, a {str(date)}, entre la Corporación de Innovación y Desarrollo Tecnológico, Rut 78.898.766-4, representada por su Director General don(a) Roberto Gomez Bolainas, Cédula de Identidad Nº 10.678.990-2, ambos domiciliados en Caupolican 455 de esta ciudad, en adelante la “Corporación” y  {full_name}, de nacionalidad {nationality}, de profesión {profession}, nacido el {birth_date}, con domicilio en {address}, Cédula de Identidad N° {rut}, en adelante, el “Prestador de Servicios”, se ha convenido el siguiente contrato de prestación de servicios a honorarios: \n')
+'............................................................................................................................................................................................................................. ').bold = True
+    p = document.add_paragraph (f'En Temuco, a {str(date)}, entre la Corporación de Innovación y Desarrollo Tecnológico  Rut 78.898.766-4'
+    'representada por su Director General don(a) Roberto Gomez Bolainas'
+    ', Cédula de Identidad Nº 10.678.990-2, ambos domiciliados en Caupolican 455 de esta ciudad'
+    ', en adelante la “Corporación” y  {full_name}, de nacionalidad {nationality}, de profesión {profession}, nacido el {birth_date}'
+    ', con domicilio en {address}, Cédula de Identidad N° {rut}, en adelante, el “Prestador de Servicios” '
+    ', se ha convenido el siguiente contrato de prestación de servicios a honorarios: \n')
     font.size = Pt(8)
     p1 = document.add_paragraph('')
     p1.add_run('PRIMERO        :').bold = True
-    p1.add_run('En el marco del acuerdo de servicios profesionales fechado el 11 de noviembre de 2020, establecido entre la Agencia Nacional de Estándares Educativos y la Corporación de Innovación y Desarrollo Tecnológico , y ratificado según la Resolución Exenta N°603 del 23 de noviembre de 2020, la Corporación encarga los servicios profesionales del Prestador de Servicios, para que ejecute la siguiente tarea en el proyecto "Evaluación de competencias específicas y metodologías de aprendizaje artificial 2020, ID 67703-20-JJ90."')
+    p1.add_run('En el marco del acuerdo de servicios profesionales fechado el 11 de noviembre de 2020'
+'establecido entre la Agencia Nacional de Estándares Educativos y la Corporación de Innovación y Desarrollo Tecnológico '
+', y ratificado según la Resolución Exenta N°603 del 23 de noviembre de 2020, la Corporación encarga los servicios profesionales del Prestador de Servicios'
+', para que ejecute la siguiente tarea en el proyecto "Evaluación de competencias específicas y metodologías de aprendizaje artificial 2020, ID 67703-20-JJ90."')
     p1.add_run('\n SEGUNDO        :').bold = True
     p1.add_run('El rol a desempeñar es de '+rol+'.')
     p1.add_run('\n TERCERO        :').bold = True
-    p1.add_run('El plazo para la realización de la prestación de servicios encomendada será el '+str(date))
+    p1.add_run('El plazo para la realización de la prestación de servicios encomendada sera el '+str(date))
     p1.add_run('\n CUARTO        :').bold = True
-    p1.add_run('Por el servicio profesional efectivamente realizado, se pagara un monto bruto variable, el cual corresponderá a cada rol dentro de la empresa capacitación, de acuerdo al siguiente detalle: ')
+    p1.add_run('Por el servicio profesional efectivamente realizado, se pagara un monto bruto variable'
+    ', el cual corresponderá a cada rol dentro de la empresa capacitación, de acuerdo al siguiente detalle: ')
     table = document.add_table(rows=2, cols=2)
     table.alignment = 1
     hdr_cells0 = table.rows[0].cells
@@ -55,8 +64,12 @@ def example_contract(date:str, rol:str, address:str, rut:str, full_name:str, nat
     p1.add_run('\n QUINTO        :').bold = True
     p1.add_run('El Prestador de Servicios acepta el encargo y las condiciones precedentes.')
     p1.add_run('\n SEXTO        :').bold = True
-    p1.add_run(
-    'El Prestador de Servicios está obligado a mantener la confidencialidad de todos los materiales utilizados, conforme al Acuerdo de Confidencialidad previamente establecido.')
+    p1.add_run('El Prestador de Servicios # `está` is a Spanish verb that means "is" in English. In
+    # this context, it is used in the sentence "El Prestador de
+    # Servicios está obligado..." which translates to "The
+    # Service Provider is obligated..."
+    está obligado a mantener la confidencialidad de todos los materiales utilizados'
+    ', conforme al Acuerdo de Confidencialidad previamente establecido.')
     p1.add_run('\n En comprobante, previa lectura y ratificación, las partes firman.  ').bold = True
     table = document.add_table(rows=2, cols=2)
     table.alignment = 1

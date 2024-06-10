@@ -1,0 +1,9 @@
+{
+    "cSpell.words": [
+        "filas",
+        "gráfico"
+    ],
+    "python.analysis.extraPaths": [
+        "./plantilla_word"
+    ]
+}
